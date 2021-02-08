@@ -16,6 +16,6 @@ public class MyPreferenceActivity extends AppCompatActivity {
 
         FragmentTransaction ft =  getFragmentManager().beginTransaction();
 
-        ft.add(R.id.mycontent, fragment).commit();
+        ft.add(R.id.content, fragment).commit();
     }
 }
