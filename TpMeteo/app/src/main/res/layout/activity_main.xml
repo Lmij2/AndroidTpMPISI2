@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitleMeteo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Meteo de la ville de :"/>
+    <EditText
+        android:id="@+id/edtNomVille"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvVille"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ville :"/>
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temperature :"/>
+    <TextView
+        android:id="@+id/tvTemperatureMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temperature (min) :"/>
+    <TextView
+        android:id="@+id/tvTemperatureMax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temperature (max) :"/>
+    <TextView
+        android:id="@+id/tvHumidite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Humidite :"/>
+    <TextView
+        android:id="@+id/tvVitesseVent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vitesse du vent :"/>
+    <TextView
+        android:id="@+id/tvCompteur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compteur :"/>
+
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"/>
+</LinearLayout>
