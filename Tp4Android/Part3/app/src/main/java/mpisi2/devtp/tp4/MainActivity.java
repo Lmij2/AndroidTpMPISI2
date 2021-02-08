@@ -35,6 +35,26 @@ public class MainActivity extends AppCompatActivity {
     ArrayList listEtudiants;
     ArrayAdapter adapter;
 
+   
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        viewLogin = getLayoutInflater().inflate(R.layout.activity_main_auth, null);
+        viewMain = getLayoutInflater().inflate(R.layout.activity_main, null);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String Titre = preferences.getString("title", "no title");
+        setTitle("" + Titre);
+
+        setContentView();
+
+    }
+    //cette methode est differente des methodes qu'on met dans le onCreateView ou onCreate
+    //Ici c'est le prf qui a demander de creer cette methode
+    //On pourrait la nomme autrement comme par example "changerInterface()" ou "afficherInterface()"
+    //Or la methode dans onCreateView ou onCreate est deja faite par Android Studio et elle prend des parametres
     private void setContentView(){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean useLoggin = preferences.getBoolean("useLoginPassword", false);
@@ -200,21 +220,6 @@ public class MainActivity extends AppCompatActivity {
             //login erreur ou mot de passe erreur
             Toast.makeText(this, "Erreur: login ou password n'est pas correct ", Toast.LENGTH_SHORT).show();
         }
-    }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        viewLogin = getLayoutInflater().inflate(R.layout.activity_main_auth, null);
-        viewMain = getLayoutInflater().inflate(R.layout.activity_main, null);
-
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-
-        String Titre = preferences.getString("title", "no title");
-        setTitle("" + Titre);
-
-        setContentView();
-
     }
 
     private void ajouterEtudiant(){
