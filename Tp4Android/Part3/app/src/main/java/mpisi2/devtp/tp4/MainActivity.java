@@ -60,7 +60,11 @@ public class MainActivity extends AppCompatActivity {
         boolean useLoggin = preferences.getBoolean("useLoginPassword", false);
 
         if(useLoggin == true){
+            
+            //methode de onCreateView ou onCreate Android Studio
             setContentView(viewLogin);
+            
+            
             etLogin = findViewById(R.id.etLogin);
             etPassword = findViewById(R.id.etPassword);
             btnAuthOk = findViewById(R.id.btnAuthOk);
@@ -73,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
             });
         }
         else {
+
+            
+            //methode de onCreateView ou onCreate Android Studio
             setContentView(viewMain);
 
             etNom = findViewById(R.id.etNom);
@@ -154,6 +161,8 @@ public class MainActivity extends AppCompatActivity {
                 &&
            passwordPreference.equals(etPassword.getText().toString().trim())){
             // alors le login et le mot de passe sont correcte avec celle des preferences
+            
+            //methode de onCreateView ou onCreate Android Studio
             setContentView(viewMain);
 
             etNom = findViewById(R.id.etNom);
